@@ -1,1 +1,0 @@
-# I want to refactor a legacy system. You want to rewrite it from scratch. Argument. Then, switch our roles.
