@@ -16,12 +16,9 @@ const DisplayRepositories = (props) => {
     </div>
   ));
   return (
-    <div>
-      <div className="wrapper">
-        <ul>{repoNames}</ul>
-      </div>
+    <div className="ul-container">
+      <ul>{repoNames}</ul>
     </div>
   );
 };
-
 export default DisplayRepositories;
