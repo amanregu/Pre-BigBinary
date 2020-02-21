@@ -1,3 +1,7 @@
+body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -12,7 +16,45 @@
     width: 80vw;
     display: flex;
     justify-content: space-between;
+    input {
+      width: 768px;
+      line-height: 1.5;
+      font-size: 20px;
+      height: 34px;
+      padding: 6px 8px;
+      border: 1px solid #d1d5da;
+      border-radius: 3px;
+      font-family: inherit;
+    }
 }
+.filter-select {
+  padding: 5px;
+  font-size: 25px;
+  font-family: inherit;
+  color: #24292e;
+  background-color: #eff3f6;
+  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+  outline: none;
+  border-radius: 5px;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.filter-label {
+  font-size: 25px;
+  font-family: inherit;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #e1e4e8;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(225, 228, 232);
+}
+
 ul {
   width: 80vw;
   padding-inline-start: 0px
@@ -51,4 +93,22 @@ ul {
   line-height: 20px;
   color: #24292e;
   font-weight: 600;
+}
+
+.results-wrapper {
+  display: flex;
+  justify-content: space-between;
+  button {
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px;
+    height: 40px;
+    margin-top: 6px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+    &:hover {
+      color: blue;
+    }
+  }
 }

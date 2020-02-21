@@ -47,11 +47,16 @@ class SearchRepositories extends Component {
       || searchText !== ''
     ) {
       return (
-        <h5>
-          {props.length}
-          {' '}
-          Results
-        </h5>
+        <div className="results-wrapper bottom-border">
+          <h5>
+            {props.length}
+            {' '}
+            Results
+          </h5>
+          <button type="button" onClick={this.handleFilterReset.bind(this)}>
+            Clear Filters
+          </button>
+        </div>
       );
     } return null;
   }
@@ -80,7 +85,7 @@ class SearchRepositories extends Component {
       );
     }
     return (
-      <div>
+      <div className="container">
         {this.renderNumberOfResults(repositories)}
         <DisplayRepositories repositories={repositories} />
       </div>
@@ -92,15 +97,16 @@ class SearchRepositories extends Component {
     return (
       <>
         <div className="wrapper">
-          <div className="search-wrapper">
+          <div className="search-wrapper bottom-border">
             <input
               onChange={(e) => this.handleSearchText(e)}
               value={searchText}
               placeholder="Find a repository..."
             />
-            <label htmlFor="search" name="type">
+            <label className="filter-label" htmlFor="search" name="type">
               Type:
               <select
+                className="filter-select"
                 value={typeValue}
                 onChange={(e) => this.handleTypeFilter(e)}
               >
@@ -113,9 +119,10 @@ class SearchRepositories extends Component {
                 <option value="mirrors">Mirrors</option>
               </select>
             </label>
-            <label htmlFor="type" name="type">
+            <label className="filter-label" htmlFor="type" name="type">
               Language:
               <select
+                className="filter-select"
                 value={languageValue}
                 onChange={(e) => this.handleLanguageFilter(e)}
               >
@@ -125,9 +132,6 @@ class SearchRepositories extends Component {
                 <option value="css">CSS</option>
               </select>
             </label>
-            <button type="button" onClick={this.handleFilterReset.bind(this)}>
-              Clear Filters
-            </button>
           </div>
           {this.renderRepositories(this.props)}
         </div>
