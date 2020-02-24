@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const repositoriesRouter = require('./routes/repositories.js');
 
 const app = express();
 
@@ -42,6 +43,7 @@ mongoose.connect('mongodb://localhost:27017/gitRepoSearch', async (err) => {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/repositories', repositoriesRouter);
 
 app.use((req, res, next) => {
   next(createError(404));
