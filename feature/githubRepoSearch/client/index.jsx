@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-import DisplayRepositories from './components/DisplayRepositories';
+import SearchRepositories from './components/SearchRepositories';
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class App extends Component {
           </div>
         ) : (
           <div>
-            <DisplayRepositories repositories={repositories} />
+            <SearchRepositories repositories={repositories} />
           </div>
         )}
       </div>
